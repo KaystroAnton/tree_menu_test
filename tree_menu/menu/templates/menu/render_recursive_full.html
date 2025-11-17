@@ -1,0 +1,17 @@
+{% load menu_tags %}
+{% current_path as current_path %}
+<ul>
+  {% for node in nodes %}
+    {% get_url node as path %}
+    <li>
+      {% if path == current_path %}
+        <p> {{ node.name }} <p>
+      {% else %}
+        <a href= {{ path }}> {{ node.name }} </a>
+      {% endif%}
+      {% if node.children.exists %}
+        {% render_recursive_full node.children.all %}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

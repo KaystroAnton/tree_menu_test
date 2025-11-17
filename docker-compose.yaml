@@ -1,0 +1,10 @@
+services: # контейнеры с которыми мы работаем
+  backend:
+   image: task_backend # образа нет в docker hub, значит вводим build
+   build: ./tree_menu # показывает, где взять докер файл для образа
+   ports:
+     - 8000:8000
+   command:
+     python manage.py runserver 0.0.0.0:8000
+   volumes:
+    - ./tree_menu:/app

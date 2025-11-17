@@ -1,0 +1,16 @@
+{% load menu_tags %}
+<ul>
+    <li>
+      {% if node.level == active_node %}
+        <p> {{node.level.name}}</p>
+        <ul class="dropdown-content">
+            {% for child in node.level.children.all %}
+          <li><a href= {{ child.url }}> {{ child.name }} </a></li>
+            {% endfor %}
+        </ul>
+      {% else %}
+        <a href= {{ node.level.url }}> {{ node.level.name }} </a>
+        {% render_recursive nodes active_node  level|add:"1"  %}
+      {% endif%}
+    </li>
+</ul>
