@@ -20,13 +20,16 @@
 Были использованы только стандартная библиотека python и джанго
 Если использовать docker:
 1)git clone https://github.com/KaystroAnton/tree_menu_test.git
-2)docker-compose up
+2)cd tree_menu
+3)docker-compose up
+4) Для создания админа, войдите в контейнер(exec) и напишите команду python manage.py createsuperuser
 
 Если не использовать docker:
 1)git clone https://github.com/KaystroAnton/tree_menu_test.git
-2)python -m venv tree_menu/venv
-3)tree_menu/venv/Scripts/activate
-4)pip install -r tree_menu/requirements.txt
-4.1)python.exe -m pip install --upgrade pip если необходимо
-5)python manage.py createsuperuser
-6)python manage.py runserver
+2)cd tree_menu
+3)python -m venv venv
+4)venv/Scripts/activate
+5)pip install -r tree_menu/requirements.txt
+5.1)python.exe -m pip install --upgrade pip если необходимо
+6)python manage.py createsuperuser
+7)python manage.py runserver
