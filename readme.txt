@@ -19,7 +19,7 @@
 
 Были использованы только стандартная библиотека python и джанго
 Если использовать docker:
-1)git clone https://github.com/KaystroAnton/tree_menu.git
+1)git clone https://github.com/KaystroAnton/tree_menu_test.git
 2)docker-compose up
 
 Если не использовать docker:
