@@ -37,7 +37,6 @@ def render_menu(menu_items, active_node, level = 0):
         menu_html += '<ul>'
     else:
         menu_html += f'<a href="{item.get_item_url()}">{item.name}</a>'
-        print(menu_items, active_node, level+1)
         menu_html += render_menu(menu_items, active_node, level+1)
     menu_html += '</li>'
     menu_html += '</ul>'
@@ -96,7 +95,6 @@ def draw_menu(context,menu_name):
     for item in item_map:
         if current_path == 'http://localhost:8000/': # Костыль, чтобы localhost корректно обрабатывался
             current_path =  'http://127.0.0.1:8000/'
-        print("check urls ", current_path, "  ", item.get_item_url())
         if item.get_item_url() == current_path:
             ancestors=get_ancestors(item)
             active_node = item
