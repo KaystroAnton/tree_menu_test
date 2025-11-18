@@ -31,5 +31,5 @@
 4)venv/Scripts/activate
 5)pip install -r tree_menu/requirements.txt
 5.1)python.exe -m pip install --upgrade pip если необходимо
-6)python manage.py createsuperuser
+6)python tree_menu/manage.py createsuperuser
 7)python tree_menu/manage.py runserver
