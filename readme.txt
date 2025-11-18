@@ -23,7 +23,7 @@
 2)docker-compose up
 
 Если не использовать docker:
-1)git clone https://github.com/KaystroAnton/tree_menu.git
+1)git clone https://github.com/KaystroAnton/tree_menu_test.git
 2)python -m venv tree_menu/venv
 3)tree_menu/venv/Scripts/activate
 4)pip install -r tree_menu/requirements.txt
