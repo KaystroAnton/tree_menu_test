@@ -9,7 +9,7 @@ def show_menu(request):
     return render(request, "menu/menu.html")
 
 def creat_table(model):
-    menu = model.objects.create(name="menu",url = 'http://127.0.0.1:8000/00')
+    menu = model.objects.create(name="menu",url = 'http://127.0.0.1:8000/00',url_name = 'localhost')
     menu2 = model.objects.create(name="menu2", url='menu2')
     menu3 = model.objects.create(name="menu3", url='menu3')
     main2 = model.objects.create(name="Главная2", parent=menu ,url='main2')

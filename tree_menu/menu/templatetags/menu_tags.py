@@ -94,6 +94,9 @@ def draw_menu(context,menu_name):
     ancestors = []
     active_node = None
     for item in item_map:
+        if current_path == 'http://localhost:8000/': # Костыль, чтобы localhost корректно обрабатывался
+            current_path =  'http://127.0.0.1:8000/'
+        print("check urls ", current_path, "  ", item.get_item_url())
         if item.get_item_url() == current_path:
             ancestors=get_ancestors(item)
             active_node = item
